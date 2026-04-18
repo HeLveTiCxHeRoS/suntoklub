@@ -5,11 +5,49 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #ebc392;
   color: #000;
   line-height: 1.5;
+}
+
+/* IMAGES */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* LINKS */
+a {
+  text-decoration: none;
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: 800;
+  transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-orange {
+  background: #ff6123;
+  color: #fff;
+}
+
+.btn-light {
+  background: #fff;
+  color: #ff6123;
 }
 
 /* NAVBAR */
@@ -25,21 +63,19 @@ body {
 
 .logo img {
   width: 160px;
-  max-width: 100%;
 }
 
 .nav-links {
   display: flex;
+  justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
 .nav-links a {
-  color: white;
-  text-decoration: none;
+  color: #fff;
   font-weight: 700;
-  transition: 0.2s;
+  transition: opacity 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -56,10 +92,9 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0);
   padding: 8px;
   border-radius: 14px;
-  transition: 0.2s;
+  transition: transform 0.2s ease;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
@@ -71,31 +106,6 @@ body {
   width: 34px;
   height: 34px;
   object-fit: contain;
-  display: block;
-}
-
-/* BUTTONS */
-.btn {
-  display: inline-block;
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 800;
-  transition: 0.2s;
-}
-
-.btn-orange {
-  background: #ff6123;
-  color: white;
-}
-
-.btn-light {
-  background: white;
-  color: #ff6123;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
 }
 
 /* HERO */
@@ -115,14 +125,14 @@ body {
 
 .hero-text h1 {
   font-size: 70px;
-  color: white;
-  margin-bottom: 20px;
   line-height: 0.95;
+  color: #fff;
+  margin-bottom: 20px;
 }
 
 .hero-text p {
-  color: white;
   font-size: 20px;
+  color: #fff;
   margin-bottom: 30px;
 }
 
@@ -134,101 +144,29 @@ body {
 .hero-image img {
   width: 100%;
   max-width: 400px;
+  margin: 0 auto;
 }
 
-/* ABOUT */
-.about-section {
+/* GENERAL SECTION LAYOUTS */
+.values-section,
+.about-section,
+.coach-section,
+.contact-section {
   display: flex;
+  align-items: center;
   gap: 80px;
   padding: 80px;
-  align-items: center;
   flex-wrap: wrap;
 }
 
-.about-text {
-  flex: 1 1 400px;
-}
-
-.about-text h2 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  line-height: 0.95;
-}
-
-.about-text p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-.about-image {
-  flex: 1 1 320px;
-}
-
-.about-image img {
-  width: 100%;
-  max-width: 400px;
-  height: 600px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-/* VALUES */
-.values-section {
-  display: flex;
-  gap: 80px;
-  padding: 80px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.values-image {
-  flex: 1 1 320px;
-}
-
-.values-image img {
-  width: 100%;
-  max-width: 400px;
-  height: 600px;
-  object-fit: cover;
-  border-radius: 20px;
-}
-
-.values-text {
-  flex: 1 1 400px;
-}
-
-.values-text h2 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  line-height: 0.95;
-}
-
-.value-item {
-  margin-bottom: 20px;
-}
-
-.value-item h3 {
-  font-size: 22px;
-  font-weight: 900;
-}
-
-.value-item p {
-  font-size: 16px;
-}
-
-/* COACH */
-.coach-section {
-  display: flex;
-  gap: 80px;
-  padding: 80px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
+.values-image,
+.about-image,
 .coach-image {
   flex: 1 1 320px;
 }
 
+.values-image img,
+.about-image img,
 .coach-image img {
   width: 100%;
   max-width: 400px;
@@ -237,16 +175,51 @@ body {
   border-radius: 20px;
 }
 
+.values-text,
+.about-text,
 .coach-text {
   flex: 1 1 400px;
 }
 
-.coach-text h2 {
+.values-text h2,
+.about-text h2,
+.coach-text h2,
+.training-text h2,
+.contact-left h2,
+.assistants-section h2 {
   font-size: 60px;
-  margin-bottom: 20px;
   line-height: 0.95;
+  margin-bottom: 20px;
 }
 
+/* VALUES */
+.value-item {
+  margin-bottom: 20px;
+}
+
+.value-item h3 {
+  font-size: 22px;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+
+.value-item p {
+  font-size: 16px;
+}
+
+/* ABOUT */
+.about-text h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+.about-text p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+/* COACH */
 .coach-text p {
   font-size: 18px;
   margin-bottom: 15px;
@@ -268,8 +241,8 @@ body {
   border-radius: 18px;
   overflow: hidden;
   padding-bottom: 25px;
-  transition: 0.3s;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
 }
 
 .pricing-card:hover {
@@ -295,9 +268,9 @@ body {
 
 .desc {
   font-size: 15px;
-  margin: 0 20px 20px;
   line-height: 1.5;
   color: #333;
+  margin: 0 20px 20px;
 }
 
 .benefits {
@@ -306,9 +279,9 @@ body {
 }
 
 .benefits li {
-  margin-bottom: 8px;
-  padding-left: 20px;
   position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
   font-size: 15px;
 }
 
@@ -316,6 +289,7 @@ body {
   content: "✔";
   position: absolute;
   left: 0;
+  top: 0;
   color: #ff6123;
   font-weight: bold;
 }
@@ -324,16 +298,15 @@ body {
   margin-left: 20px;
 }
 
-/* TRAININGSZEITEN */
+/* TRAINING */
 .training-section {
   padding: 80px;
   text-align: center;
 }
 
-.training-text h2 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  line-height: 0.95;
+.training-text h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
 }
 
 .training-text p {
@@ -347,15 +320,15 @@ body {
 }
 
 .instagram-card {
-  background: linear-gradient(135deg, #fff2e7, #f8d8bb);
-  border-radius: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 28px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff2e7, #f8d8bb);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   display: flex;
   align-items: center;
   gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
   flex-wrap: wrap;
 }
 
@@ -367,6 +340,7 @@ body {
 .instagram-card-image img {
   width: 100%;
   max-width: 260px;
+  margin: 0 auto;
   border-radius: 22px;
   object-fit: cover;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
@@ -387,37 +361,67 @@ body {
 
 .instagram-card-content h2 {
   font-size: 42px;
-  margin-bottom: 14px;
   line-height: 1.05;
+  margin-bottom: 14px;
 }
 
 .instagram-card-content p {
+  max-width: 560px;
   font-size: 18px;
   color: #333;
   margin-bottom: 24px;
-  max-width: 560px;
 }
 
-/* CONTACT */
-.contact-section {
+/* ASSISTANT COACHES */
+.assistants-section {
+  padding: 60px 80px 80px;
+  text-align: center;
+}
+
+.assistants-section h2 {
+  margin-bottom: 40px;
+}
+
+.assistants-grid {
   display: flex;
-  gap: 60px;
-  padding: 80px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
+.assistant-card {
+  background: #f0c99d;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.assistant-card:hover {
+  transform: translateY(-8px);
+}
+
+.assistant-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.assistant-card h3 {
+  padding: 15px;
+  font-size: 22px;
+}
+
+/* CONTACT */
 .contact-left {
   flex: 1 1 320px;
 }
 
-.contact-left h2 {
-  font-size: 60px;
-  margin-bottom: 20px;
-  line-height: 0.95;
-}
-
 .contact-left p {
   font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .contact-right {
@@ -443,13 +447,24 @@ body {
   flex: 1 1 220px;
 }
 
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.input-group label span {
+  font-weight: 400;
+}
+
 .input-group input,
 .input-group textarea {
   width: 100%;
   padding: 12px;
+  border: 2px solid #000;
   border-radius: 20px;
-  border: 2px solid black;
   background: transparent;
+  font: inherit;
 }
 
 textarea {
@@ -465,13 +480,13 @@ textarea {
 
 /* FOOTER */
 .footer {
+  background: rgba(255, 97, 35, 0.08);
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
   padding: 30px 40px;
   font-weight: bold;
-  background: rgba(255, 97, 35, 0.08);
   flex-wrap: wrap;
 }
 
@@ -480,17 +495,18 @@ textarea {
   height: 32px;
 }
 
-/* RESPONSIVE */
+/* TABLET */
 @media (max-width: 900px) {
   .navbar,
   .hero,
-  .about-section,
   .values-section,
+  .about-section,
   .coach-section,
   .pricing-section,
   .training-section,
   .contact-section,
-  .footer {
+  .footer,
+  .assistants-section {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -500,13 +516,17 @@ textarea {
     padding-bottom: 40px;
   }
 
-  .hero-text h1,
-  .about-text h2,
   .values-text h2,
+  .about-text h2,
   .coach-text h2,
   .training-text h2,
-  .contact-left h2 {
+  .contact-left h2,
+  .assistants-section h2 {
     font-size: 42px;
+  }
+
+  .hero-text h1 {
+    font-size: 50px;
   }
 
   .instagram-section {
@@ -518,6 +538,7 @@ textarea {
   }
 }
 
+/* MOBILE */
 @media (max-width: 700px) {
   .navbar {
     flex-direction: column;
@@ -534,10 +555,10 @@ textarea {
 
   .hero-text,
   .hero-image,
-  .about-text,
-  .about-image,
   .values-text,
   .values-image,
+  .about-text,
+  .about-image,
   .coach-text,
   .coach-image,
   .contact-left,
@@ -548,11 +569,12 @@ textarea {
   }
 
   .hero-text h1,
-  .about-text h2,
   .values-text h2,
+  .about-text h2,
   .coach-text h2,
   .training-text h2,
-  .contact-left h2 {
+  .contact-left h2,
+  .assistants-section h2 {
     font-size: 34px;
   }
 
@@ -560,21 +582,27 @@ textarea {
   .about-text p,
   .coach-text p,
   .training-text p,
-  .instagram-card-content p {
+  .instagram-card-content p,
+  .contact-left p {
     font-size: 16px;
   }
 
-  .pricing-card {
+  .pricing-card,
+  .assistant-card {
     max-width: 100%;
   }
 
-  .about-image img,
   .values-image img,
+  .about-image img,
   .coach-image img {
     height: 360px;
   }
 
   .instagram-card {
     padding: 22px;
+  }
+
+  .assistant-card img {
+    height: 260px;
   }
 }
