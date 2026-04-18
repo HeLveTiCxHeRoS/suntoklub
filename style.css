@@ -136,6 +136,42 @@ body {
   max-width: 400px;
 }
 
+/* ABOUT */
+.about-section {
+  display: flex;
+  gap: 80px;
+  padding: 80px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-text {
+  flex: 1 1 400px;
+}
+
+.about-text h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  line-height: 0.95;
+}
+
+.about-text p {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.about-image {
+  flex: 1 1 320px;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
 /* VALUES */
 .values-section {
   display: flex;
@@ -178,6 +214,42 @@ body {
 
 .value-item p {
   font-size: 16px;
+}
+
+/* COACH */
+.coach-section {
+  display: flex;
+  gap: 80px;
+  padding: 80px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.coach-image {
+  flex: 1 1 320px;
+}
+
+.coach-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.coach-text {
+  flex: 1 1 400px;
+}
+
+.coach-text h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  line-height: 0.95;
+}
+
+.coach-text p {
+  font-size: 18px;
+  margin-bottom: 15px;
 }
 
 /* PRICING */
@@ -250,6 +322,23 @@ body {
 
 .pricing-card .btn {
   margin-left: 20px;
+}
+
+/* TRAININGSZEITEN */
+.training-section {
+  padding: 80px;
+  text-align: center;
+}
+
+.training-text h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  line-height: 0.95;
+}
+
+.training-text p {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 /* INSTAGRAM */
@@ -395,8 +484,11 @@ textarea {
 @media (max-width: 900px) {
   .navbar,
   .hero,
+  .about-section,
   .values-section,
+  .coach-section,
   .pricing-section,
+  .training-section,
   .contact-section,
   .footer {
     padding-left: 24px;
@@ -409,7 +501,10 @@ textarea {
   }
 
   .hero-text h1,
+  .about-text h2,
   .values-text h2,
+  .coach-text h2,
+  .training-text h2,
   .contact-left h2 {
     font-size: 42px;
   }
@@ -439,8 +534,12 @@ textarea {
 
   .hero-text,
   .hero-image,
+  .about-text,
+  .about-image,
   .values-text,
   .values-image,
+  .coach-text,
+  .coach-image,
   .contact-left,
   .contact-right,
   .instagram-card-content,
@@ -449,12 +548,18 @@ textarea {
   }
 
   .hero-text h1,
+  .about-text h2,
   .values-text h2,
+  .coach-text h2,
+  .training-text h2,
   .contact-left h2 {
     font-size: 34px;
   }
 
   .hero-text p,
+  .about-text p,
+  .coach-text p,
+  .training-text p,
   .instagram-card-content p {
     font-size: 16px;
   }
@@ -463,7 +568,9 @@ textarea {
     max-width: 100%;
   }
 
-  .values-image img {
+  .about-image img,
+  .values-image img,
+  .coach-image img {
     height: 360px;
   }
 
