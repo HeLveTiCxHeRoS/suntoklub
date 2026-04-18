@@ -14,7 +14,7 @@ body {
 
 /* NAVBAR */
 .navbar {
-  background: #ff6123;
+  background: #434750;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -100,7 +100,7 @@ body {
 
 /* HERO */
 .hero {
-  background: #ff6123;
+  background: #434750;
   display: flex;
   align-items: center;
   justify-content: space-between;
