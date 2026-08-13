@@ -147,7 +147,7 @@ a {
   margin: 0 auto;
 }
 
-/* GENERAL SECTION LAYOUTS */
+/* GENERAL SECTIONS */
 .values-section,
 .about-section,
 .coach-section,
@@ -186,7 +186,8 @@ a {
 .coach-text h2,
 .training-text h2,
 .contact-left h2,
-.assistants-section h2 {
+.assistants-section h2,
+.gallery-header h2 {
   font-size: 60px;
   line-height: 0.95;
   margin-bottom: 20px;
@@ -314,7 +315,49 @@ a {
   margin-bottom: 15px;
 }
 
-/* INSTAGRAM */
+/* ASSISTANT COACHES */
+.assistants-section {
+  padding: 60px 80px 80px;
+  text-align: center;
+}
+
+.assistants-section h2 {
+  margin-bottom: 40px;
+}
+
+.assistants-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.assistant-card {
+  background: #f0c99d;
+  width: 100%;
+  max-width: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.assistant-card:hover {
+  transform: translateY(-8px);
+}
+
+.assistant-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.assistant-card h3 {
+  padding: 15px;
+  font-size: 22px;
+}
+
+/* INSTAGRAM CARD */
 .instagram-section {
   padding: 30px 60px 80px;
 }
@@ -372,46 +415,64 @@ a {
   margin-bottom: 24px;
 }
 
-/* ASSISTANT COACHES */
-.assistants-section {
-  padding: 60px 80px 80px;
+/* GALLERY */
+.gallery-section {
+  padding: 80px;
   text-align: center;
+  background: #ebc392;
 }
 
-.assistants-section h2 {
-  margin-bottom: 40px;
+.gallery-header {
+  margin-bottom: 50px;
 }
 
-.assistants-grid {
+.gallery-label {
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: #ff6123;
+  margin-bottom: 12px;
+}
+
+.gallery-header p {
+  font-size: 18px;
+  color: #333;
+}
+
+.gallery-grid {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.assistant-card {
-  background: #f0c99d;
+.gallery-item {
+  display: block;
   width: 100%;
-  max-width: 280px;
-  border-radius: 20px;
+  max-width: 400px;
   overflow: hidden;
+  border-radius: 20px;
   box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease;
 }
 
-.assistant-card:hover {
+.gallery-item:hover {
   transform: translateY(-8px);
 }
 
-.assistant-card img {
+.gallery-item img {
   width: 100%;
-  height: 300px;
+  max-width: 400px;
+  height: 600px;
   object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.35s ease, opacity 0.35s ease;
 }
 
-.assistant-card h3 {
-  padding: 15px;
-  font-size: 22px;
+.gallery-item:hover img {
+  transform: scale(1.03);
+  opacity: 0.92;
 }
 
 /* CONTACT */
@@ -506,7 +567,8 @@ textarea {
   .training-section,
   .contact-section,
   .footer,
-  .assistants-section {
+  .assistants-section,
+  .gallery-section {
     padding-left: 24px;
     padding-right: 24px;
   }
@@ -521,7 +583,8 @@ textarea {
   .coach-text h2,
   .training-text h2,
   .contact-left h2,
-  .assistants-section h2 {
+  .assistants-section h2,
+  .gallery-header h2 {
     font-size: 42px;
   }
 
@@ -535,6 +598,10 @@ textarea {
 
   .instagram-card-content h2 {
     font-size: 32px;
+  }
+
+  .gallery-item img {
+    height: 500px;
   }
 }
 
@@ -574,7 +641,8 @@ textarea {
   .coach-text h2,
   .training-text h2,
   .contact-left h2,
-  .assistants-section h2 {
+  .assistants-section h2,
+  .gallery-header h2 {
     font-size: 34px;
   }
 
@@ -583,12 +651,14 @@ textarea {
   .coach-text p,
   .training-text p,
   .instagram-card-content p,
-  .contact-left p {
+  .contact-left p,
+  .gallery-header p {
     font-size: 16px;
   }
 
   .pricing-card,
-  .assistant-card {
+  .assistant-card,
+  .gallery-item {
     max-width: 100%;
   }
 
@@ -605,4 +675,30 @@ textarea {
   .assistant-card img {
     height: 260px;
   }
+
+  .gallery-section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .gallery-grid {
+    gap: 24px;
+  }
+
+  .gallery-item img {
+    height: 360px;
+  }
+}
+
+/* FOOTER ADDRESS / GOOGLE MAPS */
+.address-link {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.address-link:hover {
+  color: #ff6123;
+  text-decoration: underline;
 }
